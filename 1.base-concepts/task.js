@@ -36,9 +36,9 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   const P = numPercent / 100 / 12;
   const S = numAmount - numContribution;
   const mounthlyPayment = S * (P + (P / (((1 + P) ** numCountMonths) - 1)));
-  const totalPayment = mounthlyPayment * 12;
+  const totalPayment = mounthlyPayment * numCountMonths;
   const result = Math.round(totalPayment * 100) / 100;
   return result;
 };
 
-console.log(calculateTotalMortgage('10', 0, '50000', 12))
+console.log(calculateTotalMortgage(10, 0, 10000, 36))
