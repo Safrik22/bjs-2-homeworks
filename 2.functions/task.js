@@ -33,7 +33,7 @@ function getArrayParams2(...arr) {
   const avg = (sum / arr.length).toFixed(2);
   const avgFormatted = Number.parseFloat(avg);
   return { min: min, max: max, avg: avgFormatted };
-}
+};
 
 //Задача 2
 
