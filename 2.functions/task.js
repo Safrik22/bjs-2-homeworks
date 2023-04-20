@@ -74,7 +74,8 @@ function differenceEvenOddWorker(...arr) {
       sumOddElement = sumOddElement + arr[i];
     }
   }
-  return sumEvenElement - sumOddElement;
+  const result = sumEvenElement - sumOddElement;
+  return result || 0;
 };
 
 function averageEvenElementsWorker(...arr) {
