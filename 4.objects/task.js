@@ -12,9 +12,8 @@ Student.prototype.setSubject = function (subjectName) {
 
 Student.prototype.addMarks = function (...marks) {
   if (!this.marks) return
-  this.marks = marks
+  this.marks.push(...marks)
 }
-
 
 Student.prototype.getAverage = function () {
   if (!this.marks || !this.marks.length) return 0
@@ -26,3 +25,10 @@ Student.prototype.exclude = function (reason) {
   delete(this.subject)
   this.excluded = reason;
 }
+
+let student = new Student("Василиса", "женский", 19);
+console.log(student.marks)
+student.addMarks(5, 4, 5);
+console.log('addMarks', student.marks)
+student.addMarks(5, 4, 5);
+console.log('addMarks', student.marks)
