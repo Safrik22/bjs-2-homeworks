@@ -25,10 +25,3 @@ Student.prototype.exclude = function (reason) {
   delete(this.subject)
   this.excluded = reason;
 }
-
-let student = new Student("Василиса", "женский", 19);
-console.log(student.marks)
-student.addMarks(5, 4, 5);
-console.log('addMarks', student.marks)
-student.addMarks(5, 4, 5);
-console.log('addMarks', student.marks)
