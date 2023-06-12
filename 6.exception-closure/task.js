@@ -28,7 +28,7 @@ class Triangle {
     }
 
     get perimeter() {
-        return (a + b + c);
+        return (this.a + this.b + this.c);
     }
 
     get area() {
@@ -42,8 +42,8 @@ function getTriangle(a, b, c) {
         return new Triangle(a, b, c);
     } catch (error) {
         return {
-            area: function () { return "Ошибка! Треугольник не существует" },
-            perimeter: function () { return "Ошибка! Треугольник не существует" }
+            area: "Ошибка! Треугольник не существует",
+            perimeter: "Ошибка! Треугольник не существует"
         }
     }
 }
