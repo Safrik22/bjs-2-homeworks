@@ -35,7 +35,7 @@ class Triangle {
         const p = this.perimeter / 2;
         const result = Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c));
 
-        return Math.parseFloat(result.toFixed(3));
+        return Number.parseFloat(result.toFixed(3));
     }
 }
 
